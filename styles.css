@@ -1,0 +1,115 @@
+/* Main Navbar container */
+.nav-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out items: left, center, right */
+    align-items: center; /* Vertically align items */
+    padding: 0 1rem; /* Add padding around the navbar */
+    background-color: #f8f9fa; /* Light background color */
+    border-bottom: 1px solid #ddd; /* Add a bottom border for separation */
+    position: relative; /* Ensure proper stacking */
+    z-index: 2; /* Ensure it stays above other elements */
+}
+
+/* Left-aligned logo and app name */
+.brand {
+    display: flex; /* Align logo and app name horizontally */
+    align-items: center; /* Vertically align logo and app name */
+    gap: 0.5rem; /* Add spacing between logo and app name */
+}
+
+.logo-img {
+    width: 40px; /* Adjust logo size */
+    height: 40px; /* Adjust logo size */
+}
+
+.app-name {
+    font-size: 1.2rem; /* Adjust font size for app name */
+    font-weight: bold; /* Make app name bold */
+}
+
+/* Center-aligned navigation links */
+.nav-bar {
+    flex-grow: 1; /* Allow nav links to take up available space */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center align the nav links */
+}
+
+.nav-links {
+    display: flex; /* Align items in a row */
+    gap: 1rem; /* Add spacing between links */
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.nav-links li {
+    list-style: none; /* Remove bullets from li */
+}
+
+.nav-link {
+    text-decoration: none; /* Remove underline */
+    color: black; /* Set text color */
+    font-size: 1rem; /* Adjust font size */
+}
+
+/* Right-aligned user info */
+.user-info {
+    font-size: 1rem; /* Adjust font size for user info */
+    color: black; /* Set text color */
+}
+
+
+/* Secondary Subnav container */
+.subnav-container {
+    background-color: #f8f9fa; /* Light gray background for subnav */
+    padding: 0; /* Remove padding around the subnav */
+    border-bottom: 1px solid #ccc; /* Add a bottom border for separation */
+    /*margin-top: 0.5rem; /* Add spacing between the main navbar and subnav */
+    position: relative; /* Ensure proper stacking */
+    display: flex;
+    justify-content: space-around;
+    height: 34px;
+}
+
+/* Subnav links */
+.subnav-links {
+    display: flex; /* Align items in a row */
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Remove default padding */
+    margin: 9px 9px 0 9px; /* Remove default margin */
+    justify-content: center; /* Center align the subnav links */
+    /* border-bottom: 1px solid #ccc; /* Add a border below the tabs */
+}
+
+.subnav-links li {
+    margin: 0; /* Remove margin from list items */
+}
+
+.subnav-links a {
+    text-decoration: none; /* Remove underline */
+    color: #007bff; /* Set link color */
+    font-size: 1rem; /* Adjust font size */
+    padding: 0.5rem 1.5rem; /* Add padding for tab-like appearance */
+    border: 1px solid transparent; /* Add a border for hover and active effects */
+    border-radius: 5px 5px 0 0; /* Round the top corners for a tab-like look */
+    background-color: #f8f9fa; /* Default background */
+    transition: all 0.3s ease; /* Smooth transition for hover and active states */
+    position: relative; /* Position for active tab effect */
+    top: 1px; /* Slightly overlap the border */
+    border-bottom: 1px solid #ccc;
+}
+
+.subnav-links a:hover {
+    background-color: #e9ecef; /* Light background on hover */
+    border-color: #ccc; /* Add a border on hover */
+    top: 0; /* Align with the active tab */
+}
+
+.subnav-links a.active {
+    background-color: white; /* Highlight active tab */
+    color: #000; /* Black text for active tab */
+    border: 1px solid #ccc; /* Match border color with the container */
+    border-bottom: 1px solid white; /* Hide the bottom border for active tab */
+    top: 0; /* Align with the container */
+    z-index: 1; /* Bring the active tab to the front */
+}
