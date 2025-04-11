@@ -1,0 +1,242 @@
+<html>
+
+<head>
+    <title>Landing Zone</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Container to hold the divs */
+        .container {
+            display: flex;
+            /* Use flexbox to align items side by side */
+            justify-content: space-between;
+            /* Add spacing between the divs */
+            height: 100vh;
+            /* Make the container take up the full height of the viewport */
+        }
+
+        /* Individual div styling */
+        .container div {
+            width: 50%;
+            /* Each div takes 50% of the container width */
+            padding: 20px;
+            /* Add padding inside the divs */
+            background-color: #fff;
+            /* White background */
+            border-radius: 5px;
+            /* Rounded corners */
+            /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+            /* Subtle shadow */
+            display: flex;
+            /* Use flexbox for inner alignment */
+            flex-direction: column;
+            /* Stack child elements vertically */
+            justify-content: center;
+            /* Center content vertically */
+            align-items: center;
+            /* Center content horizontally */
+        }
+
+        /* Image container */
+        .image-container {
+            text-align: center;
+            /* Center align the image */
+            margin-bottom: 1rem;
+            /* Add spacing below the image */
+        }
+
+        .image-container img {
+            max-width: 100%;
+            /* Ensure the image is responsive */
+            height: auto;
+            /* Maintain aspect ratio */
+        }
+
+        /* Text container */
+        .text-container p {
+            margin: 0.5rem 0;
+            /* Add spacing between lines */
+            text-align: left;
+            /* Left align the text */
+            color: #333;
+            /* Darker text color */
+            font-size: 1rem;
+            /* Adjust font size */
+        }
+
+        /* Row inside the second div */
+        .row {
+            display: flex;
+            /* Use flexbox for layout */
+            flex-direction: column;
+            /* Stack child elements vertically */
+            justify-content: center;
+            /* Center content vertically */
+            align-items: center;
+            /* Center content horizontally */
+            gap: 1rem;
+            /* Add spacing between the divs */
+            height: 100%;
+            /* Ensure the row takes full height */
+        }
+
+        /* Inner div styling for the second div */
+        .inner-div {
+            width: 100%;
+            /* Make inner divs take full width of the parent */
+            padding: 1rem;
+            /* Add padding inside the inner divs */
+            background-color: #f9f9f9;
+            /* Light gray background */
+            border-radius: 5px;
+            /* Rounded corners */
+            text-align: center;
+            /* Center align the text */
+            font-size: 1rem;
+            /* Adjust font size */
+            color: #333;
+            /* Darker text color */
+            flex: 1;
+            /* Make all inner divs take equal height */
+            display: flex;
+            /* Use flexbox for inner alignment */
+            flex-direction: column;
+            /* Stack content vertically */
+            justify-content: center;
+            /* Center content vertically */
+        }
+
+        /* Welcome message styling */
+        .welcome-message h2 {
+            margin: 0;
+            /* Remove default margin */
+            font-size: 1.5rem;
+            /* Adjust font size */
+            color: #007bff;
+            /* Blue color for the welcome message */
+        }
+
+        /* Persona messages styling */
+        .persona-messages p {
+            margin-bottom: 0.5rem;
+            /* Add spacing below the text */
+            font-size: 1rem;
+            /* Adjust font size */
+        }
+
+        .persona-messages select {
+            width: 100%;
+            /* Make the dropdown take full width */
+            padding: 0.5rem;
+            /* Add padding inside the dropdown */
+            margin-bottom: 1rem;
+            /* Add spacing below the dropdown */
+            border: 1px solid #ccc;
+            /* Add a border */
+            border-radius: 5px;
+            /* Rounded corners */
+        }
+
+        /* Buttons styling */
+        .buttons {
+            display: flex;
+            /* Use flexbox for layout */
+            flex-direction: column;
+            /* Stack buttons vertically */
+            gap: 0.5rem;
+            /* Add spacing between buttons */
+        }
+
+/* Buttons styling */
+.buttons button {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center align icon and text */
+    gap: 0.5rem; /* Add spacing between icon and label */
+    padding: 0.5rem; /* Add padding inside the buttons */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    font-size: 1rem; /* Adjust font size */
+    cursor: pointer; /* Change cursor to pointer */
+    width: 100%; /* Make all buttons take full width of the container */
+    text-align: center; /* Center align the text */
+}
+
+.buttons button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.buttons i {
+    font-size: 1rem; /* Adjust icon size */
+}
+        /* Footer styling */
+        .footer {
+            margin-top: auto;
+            /* Push the footer to the bottom */
+            font-size: 0.9rem;
+            /* Adjust font size */
+            color: #666;
+            /* Lighter text color */
+            text-align: center;
+            /* Center align the footer text */
+        }
+
+        .inner-div.footer{
+            display: flex;
+            justify-content: flex-end
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- First Div -->
+        <div class="row">
+            <!-- Image Div -->
+            <div class="image-container">
+                <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+            </div>
+            <!-- Text Div -->
+            <div class="text-container">
+                <p>Line 1: This is the first line of text.</p>
+                <p>Line 2: This is the second line of text.</p>
+                <p>Line 3: This is the third line of text.</p>
+            </div>
+        </div>
+        <!-- Second Div -->
+        <div class="row">
+            <!-- First Inner Div: Welcome Message -->
+            <div class="inner-div welcome-message">
+                <h2>Welcome, User!</h2>
+            </div>
+            <!-- Second Inner Div: Persona Messages and Buttons -->
+            <div class="inner-div persona-messages">
+                <p>Select a message based on your persona:</p>
+
+                <div class="buttons">
+                    <button>
+                        <i class="fas fa-check"></i> Submit
+                    </button>
+                    <button>
+                        <i class="fas fa-times"></i> Cancel
+                    </button>
+                </div>
+            </div>
+            <!-- Third Inner Div: Footer -->
+            <div class="inner-div footer">
+                <p>&copy; 2025 Your Company. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
