@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split Page Layout</title>
+    <style>
+/* Main container to split the page */
+        .container {
+            display: flex;
+            height: 100vh; /* Full height of the viewport */
+            overflow: hidden; /* Prevent scrolling */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        /* Left section styling */
+        .left-section {
+            width: 40%; /* 40% width */
+            background-color: green; /* Green background */
+            display: flex;
+            flex-direction: column; /* Stack content vertically */
+            justify-content: center; /* Center content vertically */
+            align-items: flex-start; /* Align content to the left horizontally */
+            padding: 1rem; /* Add padding */
+            color: white; /* White text for contrast */
+            box-sizing: border-box; /* Include padding in width/height calculations */
+        }
+
+        .left-section img {
+            max-width: 80%;
+            /* Make the image responsive */
+            height: auto;
+            /* Maintain aspect ratio */
+            margin-bottom: 1rem;
+            /* Add spacing below the image */
+        }
+
+        .brand-text {
+            font-size: 1.5rem;
+            /* Adjust font size */
+            font-weight: bold;
+            /* Make the text bold */
+            text-align: left;
+            /* Left align the text */
+        }
+
+        /* Right section styling */
+        .right-section {
+            width: 60%; /* 60% width */
+            display: flex;
+            flex-direction: column; /* Stack content vertically */
+            justify-content: space-evenly; /* Space out sections */
+            padding: 2rem; /* Add padding */
+            gap: 1rem; /* Add spacing between sections */
+            align-items: flex-start; /* Align content to the left horizontally */
+            box-sizing: border-box; /* Include padding in width/height calculations */
+            overflow: hidden; /* Prevent overflow */
+        }
+
+        /* Welcome message styling */
+        .welcome-message {
+            text-align: left; /* Align the text to the left */
+            font-size: 1.5rem; /* Adjust font size */
+            font-weight: bold; /* Make the text bold */
+            color: #333; /* Darker text color */
+        }
+
+        /* Buttons styling */
+        .buttons {
+            display: flex;
+            flex-direction: column; /* Stack buttons vertically */
+            gap: 1rem; /* Add spacing between buttons */
+        }
+
+        /* Footer styling */
+        .footer {
+            text-align: center; /* Center align the footer text */
+            font-size: 0.9rem; /* Adjust font size */
+            color: #666; /* Lighter text color */
+        }
+        
+        /* Buttons styling */
+        .buttons button {
+            padding: 0.75rem; /* Add padding inside the buttons */
+            border: none; /* Remove default border */
+            border-radius: 5px; /* Rounded corners */
+            background-color: #007bff; /* Blue background */
+            color: white; /* White text */
+            font-size: 1rem; /* Adjust font size */
+            cursor: pointer; /* Change cursor to pointer */
+            width: 100%; /* Make buttons take full width of the container */
+            text-align: center; /* Center align the text */
+        }
+        
+        .buttons button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+            <div class="brand-text">Brand Name</div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <!-- Welcome Message -->
+            <div class="welcome-message">Welcome, User!</div>
+
+            <!-- Buttons Section -->
+            <div class="buttons">
+                <button><i class="fas fa-check"></i> Submit</button>
+                <button><i class="fas fa-times"></i> Cancel</button>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">&copy; 2025 Your Company. All rights reserved.</div>
+        </div>
+    </div>
+</body>
+
+</html>
